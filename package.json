@@ -1,0 +1,24 @@
+{
+  "name": "in-progress",
+  "version": "0.8.0",
+  "description": "Prevent screen transition if any state changed.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leko/in-progress.js.git"
+  },
+  "keywords": [
+    "beforeunload",
+    "form",
+    "promise"
+  ],
+  "author": "Leko <leko.noor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Leko/in-progress.js/issues"
+  },
+  "homepage": "https://github.com/Leko/in-progress.js#readme"
+}
