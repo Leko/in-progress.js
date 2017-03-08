@@ -13,7 +13,9 @@ gulp.task('build', (done) => {
   webpack(Object.assign(webpackConfig, {
     entry: path.resolve(__dirname, 'index.js'),
     output: {
-      filename: 'inprogress.js'
+      filename: 'inprogress.js',
+      library: 'InProgress',
+      libraryTarget: 'umd'
     }
   }))
     .pipe(gulp.dest('dist'))
