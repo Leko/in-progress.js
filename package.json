@@ -2,8 +2,9 @@
   "name": "in-progress",
   "version": "0.8.0",
   "description": "Prevent screen transition if any state changed.",
-  "main": "index.js",
+  "main": "dist/inprogress.js",
   "scripts": {
+    "build": "gulp build",
     "test": "mocha"
   },
   "repository": {
@@ -20,5 +21,24 @@
   "bugs": {
     "url": "https://github.com/Leko/in-progress.js/issues"
   },
-  "homepage": "https://github.com/Leko/in-progress.js#readme"
+  "homepage": "https://github.com/Leko/in-progress.js#readme",
+  "dependencies": {
+    "deep-equal": "^1.0.1",
+    "form-serialize": "^0.7.1",
+    "good-listener": "^1.2.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.4.0",
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-preset-env": "^1.2.1",
+    "gulp": "^3.9.1",
+    "gulp-gzip": "^1.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.0.1",
+    "gulp-util": "^3.0.8",
+    "pump": "^1.0.2",
+    "webpack-stream": "^3.2.0"
+  }
 }
