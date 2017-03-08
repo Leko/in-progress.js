@@ -6,3 +6,4 @@ test:
     - npm run lint
   post:
     - npm run build
+    - bash <(curl -s https://codecov.io/bash)
