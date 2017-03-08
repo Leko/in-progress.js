@@ -1,5 +1,4 @@
-
-import listen from 'good-listener'
+/* eslint-env browser */
 import serialize from 'form-serialize'
 import NullDetector from './NullDetector'
 
