@@ -2,5 +2,7 @@ machine:
   node:
     version: 6.1.0
 test:
+  pre:
+    - npm run lint
   post:
     - npm run build
