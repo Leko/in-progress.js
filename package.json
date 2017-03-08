@@ -3,6 +3,7 @@
   "version": "0.8.0",
   "description": "Prevent screen transition if any state changed.",
   "main": "dist/inprogress.js",
+  "files": ["dist/inprogress.js"],
   "scripts": {
     "build": "gulp build",
     "test": "mocha"
