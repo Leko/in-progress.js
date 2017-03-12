@@ -6,6 +6,7 @@ dependencies:
     - git config user.name Leko
     - git config user.email $NPM_EMAIL
   override:
+    - npm install
     - npm run build
   post:
     - go get github.com/aktau/github-release
