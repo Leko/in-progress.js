@@ -1,12 +1,13 @@
 {
   "name": "in-progress",
-  "version": "0.8.0",
+  "version": "0.8.2",
   "description": "Prevent screen transition if any state changed.",
   "main": "dist/inprogress.js",
   "files": [
     "dist/inprogress.js"
   ],
   "scripts": {
+    "prepublish": "npm run build",
     "build": "gulp build",
     "lint": "standard --parser babel-eslint",
     "test": "istanbul cover _mocha -- --require babel-register --recursive"
