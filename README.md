@@ -14,17 +14,17 @@
 
 ## Getting started
 ```
+npm install in-progress
+bower install in-progress
 ```
 
 ## Usage
 ```js
-import InProgress, {
-  NullDetector
-  FormValueDetector
-} from 'in-progress'
+import { FormValueDetector } from 'in-progress'
+
+const formElement = document.querySelector('#some-form')
+const detector = new FormValueDetector(formElement)
+detector.observe()
 ```
 
-### Change detectors
-#### NullDetector
-
-#### FormValueDetector
+View [live demo](https://leko.github.io/in-progress.js/)
