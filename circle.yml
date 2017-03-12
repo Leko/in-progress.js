@@ -8,6 +8,7 @@ dependencies:
   override:
     - npm run build
   post:
+    - go get github.com/aktau/github-release
     - sudo apt-get install -y jq
 test:
   pre:
