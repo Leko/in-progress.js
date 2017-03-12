@@ -28,8 +28,7 @@
   "homepage": "https://github.com/Leko/in-progress.js#readme",
   "dependencies": {
     "deep-equal": "^1.0.1",
-    "form-serialize": "^0.7.1",
-    "good-listener": "^1.2.2"
+    "form-serialize": "^0.7.1"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",

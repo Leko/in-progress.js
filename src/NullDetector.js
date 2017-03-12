@@ -1,5 +1,4 @@
 
-import listen from 'good-listener'
 import deepEqual from 'deep-equal'
 
 export default class NullDetector {
@@ -10,7 +9,7 @@ export default class NullDetector {
 
   observe (customMessage) {
     this.reset()
-    this.listener = listen(window, 'beforeunload', e => {
+    this.listener = window.addEventListener('beforeunload', e => {
       if (this.inProgress()) {
         e.returnValue = customMessage
         e.preventDefault()
@@ -18,7 +17,7 @@ export default class NullDetector {
       } else {
         return null
       }
-    })
+    }, false)
   }
 
   stopObserve () {
@@ -33,10 +32,10 @@ export default class NullDetector {
   }
 
   inProgress () {
-    return this.valuesChanged()
+    return this.hasChanges()
   }
 
-  valuesChanged () {
-    return deepEqual(this.initialValues, this.valueFn())
+  hasChanges () {
+    return !deepEqual(this.initialValues, this.valueFn())
   }
 }
