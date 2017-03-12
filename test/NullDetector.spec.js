@@ -1,5 +1,5 @@
 /* eslint-env mocha */
-const { NullDetector } = require('../dist/inprogress')
+import { NullDetector } from '../'
 
 describe(NullDetector.name, () => {
   describe('#constructor', () => {

@@ -1,5 +1,5 @@
 /* eslint-env mocha */
-const { FormValueDetector } = require('../dist/inprogress')
+import { FormValueDetector } from '../'
 
 describe(FormValueDetector.name, () => {
   describe('#constructor', () => {
