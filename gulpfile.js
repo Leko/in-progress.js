@@ -22,7 +22,7 @@ gulp.task('build', (done) => {
     // inprogress.min.js + source map
     .pipe(sourcemaps.init())
     .pipe(uglify().on('error', gutil.log))
-    .pipe(gzip())
+    // .pipe(gzip()) // FIXME: Unexpected token
     .pipe(rename('inprogress.min.js'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist'))
