@@ -9,7 +9,7 @@
   "scripts": {
     "build": "gulp build",
     "lint": "standard --parser babel-eslint",
-    "test": "mocha"
+    "test": "istanbul cover _mocha -- --require babel-register --recursive"
   },
   "repository": {
     "type": "git",
@@ -36,12 +36,15 @@
     "babel-loader": "^6.4.0",
     "babel-plugin-transform-class-properties": "^6.23.0",
     "babel-preset-env": "^1.2.1",
+    "babel-register": "^6.23.0",
     "gulp": "^3.9.1",
     "gulp-gzip": "^1.4.0",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "^2.0.1",
     "gulp-util": "^3.0.8",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
     "pump": "^1.0.2",
     "standard": "^9.0.1",
     "webpack-stream": "^3.2.0"
