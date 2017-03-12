@@ -1,6 +1,6 @@
 {
   "name": "in-progress",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "Prevent screen transition if any state changed.",
   "main": "dist/inprogress.js",
   "files": [
