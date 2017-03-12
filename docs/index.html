@@ -1,0 +1,149 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+
+<div class="container">
+  <h1>in-progress.js demo</h1>
+  <p>
+    Prevent screen transition if any state changed.<br>
+    <a href="https://github.com/Leko/in-progress.js"><< Back to repository</a>
+  </p>
+
+  <form id="demo">
+    <button type="submit" class="btn btn-primary">Save</button>
+    <div class="form-group">
+      <label for="form-title">Title</label>
+      <input type="text" name="title" id="form-title" class="form-control" value="in-progress.js demo">
+    </div>
+
+    <div class="form-group">
+      <label for="form-category">Category</label>
+      <select name="category" id="form-category" class="form-control">
+        <option value="demo">Demo</option>
+        <option value="hobby">Hobby</option>
+        <option value="work">Work</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="form-tags">Tags</label>
+      <select name="tags" id="form-tags" class="form-control" multiple>
+        <option value="javascript" selected>javascript</option>
+        <option value="onbeforeunload" selected>onbeforeunload</option>
+        <option value="github" selected>github</option>
+        <option value="open-source" selected>open-source</option>
+        <option value="free" selected>free</option>
+      </select>
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox" name="share" class="form-check-input" checked> Public
+      </label>
+    </div>
+
+    <fieldset class="form-group">
+      <legend>Timing</legend>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" id="form-reservation-off" name="reservation" value="now" class="form-check-input" checked> Publish now
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" id="form-reservation-on" name="reservation" value="reserve" class="form-check-input"> Rreserve
+          <div class="form-group">
+            <label for="form-date">Date</label>
+            <input type="datetime-local" name="date" id="form-date" class="form-control">
+          </div>
+        </label>
+      </div>
+    </fieldset>
+
+    <div class="form-group">
+      <label for="form-content">Content</label>
+      <textarea name="content" id="form-content" rows="5" class="form-control">
+1. Please change some field
+2. Reload this screen, close tab, browser back
+3. Click save
+3. Try 2 again !
+      </textarea>
+    </div>
+
+    <div class="form-group row">
+      <label for="example-search-input" class="col-2 col-form-label">Search</label>
+      <div class="col-10">
+        <input class="form-control" type="search" value="How do I shoot web" id="example-search-input" name="example-search-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-email-input" class="col-2 col-form-label">Email</label>
+      <div class="col-10">
+        <input class="form-control" type="email" value="bootstrap@example.com" id="example-email-input" name="example-email-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-url-input" class="col-2 col-form-label">URL</label>
+      <div class="col-10">
+        <input class="form-control" type="url" value="https://getbootstrap.com" id="example-url-input" name="example-url-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-tel-input" class="col-2 col-form-label">Telephone</label>
+      <div class="col-10">
+        <input class="form-control" type="tel" value="1-(555)-555-5555" id="example-tel-input" name="example-tel-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-password-input" class="col-2 col-form-label">Password</label>
+      <div class="col-10">
+        <input class="form-control" type="password" value="hunter2" id="example-password-input" name="example-password-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-number-input" class="col-2 col-form-label">Number</label>
+      <div class="col-10">
+        <input class="form-control" type="number" value="42" id="example-number-input" name="example-number-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-date-input" class="col-2 col-form-label">Date</label>
+      <div class="col-10">
+        <input class="form-control" type="date" value="2011-08-19" id="example-date-input" name="example-date-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-month-input" class="col-2 col-form-label">Month</label>
+      <div class="col-10">
+        <input class="form-control" type="month" value="2011-08" id="example-month-input" name="example-month-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-week-input" class="col-2 col-form-label">Week</label>
+      <div class="col-10">
+        <input class="form-control" type="week" value="2011-W33" id="example-week-input" name="example-week-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-time-input" class="col-2 col-form-label">Time</label>
+      <div class="col-10">
+        <input class="form-control" type="time" value="13:45:00" id="example-time-input" name="example-time-input">
+      </div>
+    </div>
+  </form>
+
+  <footer class="text-center">
+    <small>&copy; 2017 Leko</small>
+  </footer>
+</div>
+
+<script src="inprogress.min.js"></script>
+<script>
+const el = document.getElementById('demo')
+const detector = new InProgress.FormValueDetector(el)
+
+el.addEventListener('submit', function (e) {
+  detector.reset()
+  e.preventDefault()
+}, false)
+
+detector.observe()
+</script>

@@ -1,0 +1,23 @@
+{
+  "name": "in-progress",
+  "description": "Prevent screen transition if any state changed.",
+  "main": "dist/inprogress.min.js",
+  "authors": [
+    "Leko <leko.noor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "beforeunload",
+    "form",
+    "promise"
+  ],
+  "homepage": "https://github.com/Leko/in-progress.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src",
+    "test",
+    "tests"
+  ]
+}
